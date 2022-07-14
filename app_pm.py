@@ -3,6 +3,7 @@ import pandas as pd
 import streamlit as st
 import pickle
 import json
+import base64
 from sklearn.preprocessing import StandardScaler
 
 pickle_model = open('predictive_maintenance_model.pickle', 'rb')
@@ -34,6 +35,22 @@ def predict_failure(air_temperature, process_temperature, rpm, torque, tool_wear
     return classifier.predict(z)
 
 def main():
+    def add_bg_from_local(image_file):
+        with open(image_file, "rb") as image_file:
+            encoded_string = base64.b64encode(image_file.read())
+        st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background-image: url(data:image/{"jpg"};base64,{encoded_string.decode()});
+            background-size: cover
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+        )
+    add_bg_from_local('Background_image.jpg')
+
     st.title('Predictive Maintenance of Machines')
     st.write('Welcome! Predictive maintenance is a technique that uses data analysis tools and techniques to detect anomalies in the operation and possible defects in equipment and processes so that it is possible to fix it before the failure.')
     st.write('Please enter the required values of parameters to predict the failure.')
