@@ -14,4 +14,4 @@ Dataset link: [Predictive Maintenance Dataset](https://archive.ics.uci.edu/ml/da
 **Areas of Improvement**: The more data collected from real industries would help in building a better model. Further study of the data and analysis could help in better feature selection of the model.
 
 
-**UPDATE** Currently facing issues with the deployed webapp due to Heroku policies.
+**UPDATE**: Currently facing issues with the deployed webapp due to Heroku policies.
