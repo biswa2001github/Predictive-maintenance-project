@@ -12,3 +12,6 @@ Dataset link: [Predictive Maintenance Dataset](https://archive.ics.uci.edu/ml/da
 **Future Scope**: This model is a demonstration of the use of machine learning in predictive maintenance of machines. It could be improved and utilised by industries and this would significantly reduce the maintenance cost of the industries.
 
 **Areas of Improvement**: The more data collected from real industries would help in building a better model. Further study of the data and analysis could help in better feature selection of the model.
+
+
+**UPDATE** Currently facing issues with the deployed webapp due to Heroku policies.
